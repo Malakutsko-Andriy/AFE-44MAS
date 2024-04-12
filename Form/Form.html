@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #Agree input {
+            display: inline !important;
+        }
+
+        #FormContainer {
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #FormContainer input,
+        select {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        button,
+        input {
+            padding: 10px;
+        }
+
+        button:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="FormContainer">
+        <input placeholder="Login" name="Login" type="text">
+        <input placeholder="Password" name="Password" type="password">
+        <input placeholder="Email" name="Email" type="email">
+        <label id="Agree" for="">
+            <input name="Agree" type="checkbox">
+            I agree
+        </label>
+        <label>
+            Select your gender
+            <select name="Gender">
+                <option value="M">Man</option>
+                <option value="W">Woman</option>
+                <option value="MW">Anofher gender</option>
+                <option value="NS">Not to say</option>
+                <option value="C">Croissant</option>
+            </select>
+        </label>
+        <button id="Submit" type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <script>
+        const SubmitB = document.getElementById("Submit")
+        SubmitB.addEventListener("click", (e) => {
+            e.preventDefault()
+            const Form = document.getElementById("FormContainer")
+
+            const formData = new FormData(Form)
+
+            for(let [name, value] of formData) {
+                console.log(`${name} = ${value}`)
+            }
+        })
+    </script>
+</body>
+
+</html>
