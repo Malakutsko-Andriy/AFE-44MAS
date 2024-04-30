@@ -122,7 +122,7 @@
 </head>
 
 <body>
-    <form method="post"  id="Form">
+    <form method="post" action="" id="Form">
         <h1>Registration</h1>
         <div class="ContainerInput">
             <input placeholder="Enter login" name="login" type="text">
@@ -170,6 +170,13 @@
     </form>
 
     <script>
+        const btn = document.getElementById('Submit')
+        btn.addEventListener('click', submit)
+        function submit(event) {
+            // за відміну стандартної поведінки кнопки в формі
+            event.preventDefault()
+            fetch('https://my-json-server.typicode.com/Malakutsko-Andriy/AFE-44MAS')
+        }
         const Submit = document.getElementById("Submit")
         const Form = document.getElementById("Form")
         const Data = new FormData(Form)
