@@ -1,0 +1,18 @@
+#content {
+    padding: 20px;
+    background-color: black;
+}
+
+* {
+    margin: 0;
+}
+
+input, select {
+    padding: 5px;
+    margin: 5px;
+}
+
+p {
+    color: white;
+    display: inline;
+}
