@@ -3,28 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Arrays</title>
 </head>
 <body>
-    <div id="content">
-        <input type="number" name="NumberA" id="NumberA">
-        <select name="Action" id="Action">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-            <option value=">">></option>
-            <option value="<"><</option>
-            <option value="=">=</option>
-            <option value=">=">>=</option>
-            <option value="<="><=</option>
-            <input type="number" name="NumberB" id="NumberB">
-            <input type="button" onclick="Start()" value="=">
-        </select>
-        <p>=======></p>
-        <p id="ResultContainer"></p>
-    </div>
+    <p id="Games"></p>
+    <button onclick="RandomNumber()">Створити випадкові числа</button>
+    <p id="ArrayNumber"></p>
+    <p id="MinNumber"></p>
+    <p id="MaxNumber"></p>
+    <p id="AverageValue"></p>
     <script src="script.js"></script>
 </body>
 </html>
