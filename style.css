@@ -19,3 +19,7 @@
 .Food {
     background-color: brown;
 }
+
+#Direction {
+    display: none;
+}
