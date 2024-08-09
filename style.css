@@ -6,7 +6,15 @@
     border-radius: 3px;
 }
 
-.Field {
+.snake {
+    background-color: green;
+}
+
+.apple {
+    background-color: brown;
+}
+
+#Field {
     width: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
